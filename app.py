@@ -51,7 +51,7 @@ def handle_message(event):
         
         if message_text == '安排表' :
             ReplyMessageRequest(reply_token=event.reply_token,
-            messages=[TextMessage('我會傳過來')])
+            messages=[TextMessage(text='我會傳過來')])
         else :
             line_bot_api.reply_message_with_http_info(
                 ReplyMessageRequest(
