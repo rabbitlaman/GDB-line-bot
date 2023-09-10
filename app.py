@@ -50,8 +50,13 @@ def handle_message(event):
         line_bot_api = MessagingApi(api_client)
         
         if message_text == '安排表' :
-            ReplyMessageRequest(reply_token=event.reply_token,
-            messages=[TextMessage(text='我會傳過來')])
+            line_bot_api.reply_message_with_http_info(            
+                ReplyMessageRequest(
+                    reply_token=event.reply_token,
+                    messages=[TextMessage(text='我會傳過來')]
+                )
+            )
+
         else :
             line_bot_api.reply_message_with_http_info(
                 ReplyMessageRequest(
