@@ -1,7 +1,11 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Sep 12 02:15:23 2023
+
+@author: z1014
+"""
+
 from flask import Flask, request, abort
-from linebot import (
-    LineBotApi
-    )
 from linebot.models import *
 from linebot.v3 import (
     WebhookHandler
@@ -23,7 +27,7 @@ from linebot.v3.webhooks import (
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi('042PpRCHOlObHG0lxX19iW08EBYLPXBKLe0Vbs4cMZeA2vvhA8sZFPTB3F7RzMl9ixpMb/v5VFJkEVMsI9U2M6Wa+8xq0xZtH4fQieO/qCCLVe+RmWtJ+Gy4fwxkxBzDKJqXFIAI4Q3M0q2sPuupPgdB04t89/1O/w1cDnyilFU=')
+configuration = Configuration(access_token='042PpRCHOlObHG0lxX19iW08EBYLPXBKLe0Vbs4cMZeA2vvhA8sZFPTB3F7RzMl9ixpMb/v5VFJkEVMsI9U2M6Wa+8xq0xZtH4fQieO/qCCLVe+RmWtJ+Gy4fwxkxBzDKJqXFIAI4Q3M0q2sPuupPgdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('eb625d3da1dc4e1ebacf288919e5234f')
 
 
@@ -48,20 +52,22 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessageContent)
 def handle_message(event):
-    
-        message_text = str(event.message.text)
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(message_text))
-        if message_text == "cool" :
-            line_bot_api.reply_message(event.reply_token,TextSendMessage('fdjifji'))
-    
-        if message_text == '安排表' :
-            image_message = ImageSendMessage(
-                original_content_url='https://github.com/rabbitlaman/GDB-line-bot/blob/main/156240.jpg',
-            )
-            line_bot_api.reply_message(event.reply_token, image_message)
+    with ApiClient(configuration) as api_client:
+        line_bot_api = MessagingApi(api_client)
+        if event.message.text == "cool":
+            line_bot_api.reply_message_with_http_info(
+                ReplyMessageRequest(
+                    reply_token=event.reply_token,
+                    messages=[TextMessage(text=event.message.text)]
+                    )
+                )
         else:
-            line_bot_api.reply_message(event.reply_token, TextSendMessage(message_text))
-            
+            line_bot_api.reply_message_with_http_info(
+                ReplyMessageRequest(
+                    reply_token=event.reply_token,
+                    messages=[TextMessage(text='fuck')]
+                    )
+                )
 
 if __name__ == "__main__":
     app.run()
