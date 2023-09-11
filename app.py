@@ -54,12 +54,11 @@ def handle_message(event):
         if message_text == "cool" :
             line_bot_api.reply_message(event.reply_token,TextSendMessage(message_text))
     
-        if message_text == '安排表' :{
+        if message_text == '安排表' :
             image_message = ImageSendMessage(
                 original_content_url='https://github.com/rabbitlaman/GDB-line-bot/blob/main/156240.jpg',
             )
             line_bot_api.reply_message(event.reply_token, image_message)
-        }        
         else:
             line_bot_api.reply_message(event.reply_token, TextSendMessage(message_text))
             
