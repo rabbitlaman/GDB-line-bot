@@ -54,7 +54,7 @@ def handle_message(event):
         
         if message_text == '安排表' :
             image_message = ImageSendMessage(
-                original_content_url='https://drive.google.com/file/d/1DkJIG86mqfkGD7SWtRF1YptJSC7mCFxK/view?usp=drive_link',
+                original_content_url='https://github.com/rabbitlaman/GDB-line-bot/blob/main/156240.jpg',
             )
             line_bot_api.reply_message(event.reply_token, image_message)
         else:
