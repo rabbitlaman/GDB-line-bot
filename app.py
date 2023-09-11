@@ -50,7 +50,7 @@ def callback():
 def handle_message(event):
     
         message_text = TextSendMessage(text=event.message.text)
-        #line_bot_api.reply_message(event.reply_token,message_text)
+        line_bot_api.reply_message(event.reply_token,message_text)
         
         if message_text == '安排表' :
             image_message = ImageSendMessage(
