@@ -1,5 +1,5 @@
 from flask import Flask, request, abort
-import LineBotApi
+from linebot import LineBotApi
 from linebot.models import *
 from linebot.v3 import (
     WebhookHandler
