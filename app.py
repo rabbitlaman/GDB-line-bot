@@ -52,7 +52,7 @@ def handle_message(event):
         message_text = str(event.message.text)
         line_bot_api.reply_message(event.reply_token,TextSendMessage(message_text))
         if message_text == "cool" :
-            line_bot_api.reply_message(event.reply_token,TextMessage('fdjifji'))
+            line_bot_api.reply_message(event.reply_token,TextSendMessage('fdjifji'))
     
         if message_text == '安排表' :
             image_message = ImageSendMessage(
