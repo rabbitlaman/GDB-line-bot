@@ -21,6 +21,7 @@ from linebot.v3.messaging import (
     MessagingApi,
     ReplyMessageRequest,
     TextMessage
+    ImageMessage
 )
 from linebot.v3.webhooks import (
     MessageEvent,
@@ -57,7 +58,7 @@ def handle_message(event):
     with ApiClient(configuration) as api_client:
         line_bot_api = MessagingApi(api_client)
         if event.message.text == "cool":
-            image_message = ImageSendMessage(
+            image_message = ImageMessage(
                 original_content_url='https://i.imgur.com/f1BRvgg.jpg',
                 preview_image_url=''
             )
