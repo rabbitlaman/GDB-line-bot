@@ -62,12 +62,11 @@ def handle_message(event):
                 original_content_url='https://i.imgur.com/f1BRvgg.jpg',
                 preview_image_url=''
             )
-            line_bot_api.reply_message_with_http_info(
-                ReplyMessageRequest(
+             ReplyMessageRequest(
                     reply_token=event.reply_token,
                     messages=image_message
-                    )
-                )
+            )
+                
         else:
             line_bot_api.reply_message_with_http_info(
                 ReplyMessageRequest(
