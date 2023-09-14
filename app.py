@@ -6,9 +6,6 @@ Created on Tue Sep 12 02:15:23 2023
 """
 
 from flask import Flask, request, abort
-from linebot.models import (
-    ImageSendMessage
-    )
 from linebot.v3 import (
     WebhookHandler
 )
