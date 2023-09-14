@@ -56,8 +56,8 @@ def handle_message(event):
         line_bot_api = MessagingApi(api_client)
         if event.message.text == "cool":
             image_message = ImageMessage(
-                original_content_url='https://www.bing.com/images/search?view=detailV2&ccid=u4%2fnrN%2f3&id=5392735A19DB7652243782F7BA18C5B7953B9C68&thid=OIP.u4_nrN_3Mg-n8NBGTtYsAAHaNK&mediaurl=http%3a%2f%2fpuui.qpic.cn%2fvpic_cover%2fe0964z1l4bc%2fe0964z1l4bc_vt.jpg%2f720&exph=1280&expw=720&FORM=imgfdp&ck=61A4A4E6B74B4C4A5C4E41243E1FB76F&reqid=A9DF8EC79412430790096EF70A94DA2F&selectedIndex=1&idpp=insfeed&ajaxhist=0&ajaxserp=0',
-                preview_image_url=''
+                original_content_url='https://ithelp.ithome.com.tw/static/2023ironman/img/topic/odoo.png',
+                preview_image_url='https://ithelp.ithome.com.tw/static/2023ironman/img/topic/odoo.png'
             )
             line_bot_api.reply_message_with_http_info(
                 ReplyMessageRequest(
