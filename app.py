@@ -56,8 +56,8 @@ def handle_message(event):
         line_bot_api = MessagingApi(api_client)
         if event.message.text == "cool":
             image_message = ImageMessage(
-                original_content_url='https://i.imgur.com/f1BRvgg.jpg',
-                preview_image_url=''
+                original_content_url='https://www.bing.com/images/search?view=detailV2&ccid=u4%2fnrN%2f3&id=5392735A19DB7652243782F7BA18C5B7953B9C68&thid=OIP.u4_nrN_3Mg-n8NBGTtYsAAHaNK&mediaurl=http%3a%2f%2fpuui.qpic.cn%2fvpic_cover%2fe0964z1l4bc%2fe0964z1l4bc_vt.jpg%2f720&exph=1280&expw=720&FORM=imgfdp&ck=61A4A4E6B74B4C4A5C4E41243E1FB76F&reqid=A9DF8EC79412430790096EF70A94DA2F&selectedIndex=1&idpp=insfeed&ajaxhist=0&ajaxserp=0',
+                preview_image_url='https://www.bing.com/images/search?view=detailV2&ccid=w0%2FITiU0&id=AD7A6579F4796B6E8CC0826BFA753A7A21923D1B&thid=OIP.w0_ITiU01iXpg3qlWVEEogAAAA&mediaurl=https%3A%2F%2Fkk-cloudserver.de%2Fkk_logo_quadratisch.png&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.c34fc84e2534d625e9837aa5595104a2%3Frik%3DGz2SIXo6dfprgg%26pid%3DImgRaw%26r%3D0&exph=150&expw=150&q=kk&simid=607994458596116583&form=IRPRST&ck=DF7B90F500BC164FA329A3B7C23AFF2C&selectedindex=2&qft=+filterui%3aimagesize-small&ajaxhist=0&ajaxserp=0&vt=0&sim=11'
             )
             line_bot_api.reply_message(
                 ReplyMessageRequest(
