@@ -56,8 +56,8 @@ def handle_message(event):
         line_bot_api = MessagingApi(api_client)
         if event.message.text == "cool":
             image_message = ImageMessage(
-                original_content_url='https://wallpaperaccess.com/full/4545909.jpg',
-                preview_image_url='https://ithelp.ithome.com.tw/static/2023ironman/img/event/deco-introwhy-book.png'
+                original_content_url='https://github.com/rabbitlaman/GDB-line-bot/blob/main/156240.jpg',
+                preview_image_url='https://github.com/rabbitlaman/GDB-line-bot/blob/main/156240.jpg'
             )
             line_bot_api.reply_message_with_http_info(
                 ReplyMessageRequest(
