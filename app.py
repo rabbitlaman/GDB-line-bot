@@ -57,7 +57,7 @@ def handle_message(event):
         if event.message.text == "cool":
             image_message = ImageMessage(
                 original_content_url='https://wallpaperaccess.com/full/4545909.jpg',
-                preview_image_url='https://wallpaperaccess.com/full/4545909.jpg'
+                preview_image_url='https://ithelp.ithome.com.tw/static/2023ironman/img/event/deco-introwhy-book.png'
             )
             line_bot_api.reply_message_with_http_info(
                 ReplyMessageRequest(
