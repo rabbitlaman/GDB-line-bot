@@ -56,8 +56,8 @@ def handle_message(event):
         line_bot_api = MessagingApi(api_client)
         if event.message.text == "cool":
             image_message = ImageMessage(
-                original_content_url='https://www.travelandleisure.com/thmb/-dHUTCKiGFBTJvqGWT3TFKRp5n8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ha-long-bay-vietnam-MOSTBEAUTIFUL0921-910a3a82a03f4bb59d49290fbdc2a6db.jpg',
-                preview_image_url='https://www.travelandleisure.com/thmb/-dHUTCKiGFBTJvqGWT3TFKRp5n8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ha-long-bay-vietnam-MOSTBEAUTIFUL0921-910a3a82a03f4bb59d49290fbdc2a6db.jpg'
+                original_content_url='https://wallpaperaccess.com/full/4545909.jpg',
+                preview_image_url='https://wallpaperaccess.com/full/4545909.jpg'
             )
             line_bot_api.reply_message_with_http_info(
                 ReplyMessageRequest(
