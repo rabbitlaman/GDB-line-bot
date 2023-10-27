@@ -18,7 +18,8 @@ from linebot.v3.messaging import (
     MessagingApi,
     ReplyMessageRequest,
     TextMessage,
-    ImageMessage
+    ImageMessage,
+    get_profile
 )
 from linebot.v3.webhooks import (
     MessageEvent,
@@ -54,6 +55,9 @@ def callback():
 def handle_message(event):
     with ApiClient(configuration) as api_client:
         line_bot_api = MessagingApi(api_client)
+
+        profile = line_bot_api.get_profile(event.source.user_id)
+        
         if event.message.text == "cool":
             image_message = ImageMessage(
                 original_content_url='156240.jpg',
@@ -70,7 +74,7 @@ def handle_message(event):
             line_bot_api.reply_message_with_http_info(
                 ReplyMessageRequest(
                     reply_token=event.reply_token,
-                    messages=[TextMessage(text='yes')]
+                    messages=[TextMessage(text = profile.user_id)]
                     )
                 )
 
