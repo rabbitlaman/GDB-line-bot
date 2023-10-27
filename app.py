@@ -56,7 +56,7 @@ def handle_message(event):
         line_bot_api = MessagingApi(api_client)
 
         profile = line_bot_api.get_profile(event.source.user_id)
-        addful = profile.user_id +"\n"+ profile.display_name+"\n"+profile.pricture_url
+        addful = profile.user_id +"\n"+ profile.display_name+"\n"+profile.picture_url
         
         if event.message.text == "cool":
             image_message = ImageMessage(
