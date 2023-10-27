@@ -73,7 +73,7 @@ def handle_message(event):
             line_bot_api.reply_message_with_http_info(
                 ReplyMessageRequest(
                     reply_token=event.reply_token,
-                    messages=[TextMessage(text = profile.user_id)]
+                    messages=[TextMessage(text = (profile.user_id,profile.display_name,profile.picture_url))]
                     )
                 )
 
