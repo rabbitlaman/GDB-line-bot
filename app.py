@@ -19,7 +19,6 @@ from linebot.v3.messaging import (
     ReplyMessageRequest,
     TextMessage,
     ImageMessage,
-    get_profile,
 )
 from linebot.v3.webhooks import (
     MessageEvent,
