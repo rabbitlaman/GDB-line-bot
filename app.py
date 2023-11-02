@@ -24,6 +24,9 @@ from linebot.v3.webhooks import (
     MessageEvent,
     TextMessageContent
 )
+from linebot.models import (
+    PostbackEvent,
+)
 
 app = Flask(__name__)
 
@@ -75,6 +78,8 @@ def handle_message(event):
                 )
 @handler.add(PostbackEvent)
 def handle_postback(event):
+    with ApiClient(configuration) as api_client:
+        line_bot_api = MessagingApi(api_client)
     postback = event.postback.data
     if postback == '功能使用':
         line_bot_api.reply_message_with_http_info(
@@ -83,10 +88,6 @@ def handle_postback(event):
                 messages=[TextMessage(text = '成功')]
                 )
             )
-
-
-
-
 
 if __name__ == "__main__":
     app.run()
