@@ -58,7 +58,7 @@ def handle_message(event):
         profile = line_bot_api.get_profile(event.source.user_id)
         addful = profile.user_id +"\n"+ profile.display_name+"\n"+profile.picture_url
         
-        if event.message.text == "功能使用":
+        if event.message.text == "a":
             line_bot_api.reply_message_with_http_info(
                 ReplyMessageRequest(
                     reply_token=event.reply_token,
@@ -73,6 +73,20 @@ def handle_message(event):
                     messages=[TextMessage(text = '哈利路亞')]
                     )
                 )
+@handler.add(PostbackEvent)
+def handle_postback(event):
+    postback = event.postback.data
+    if postback == '功能使用':
+        line_bot_api.reply_message_with_http_info(
+            ReplyMessageRequest(
+                reply_token=event.reply_token,
+                messages=[TextMessage(text = '成功')]
+                )
+            )
+
+
+
+
 
 if __name__ == "__main__":
     app.run()
