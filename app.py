@@ -58,19 +58,15 @@ def handle_message(event):
         profile = line_bot_api.get_profile(event.source.user_id)
         addful = profile.user_id +"\n"+ profile.display_name+"\n"+profile.picture_url
         
-        if event.message.text == "cool":
-            image_message = ImageMessage(
-                original_content_url='156240.jpg',
-                preview_image_url='156240.jpg'
-            )
+        if event.message.text == "功能使用":
             line_bot_api.reply_message_with_http_info(
                 ReplyMessageRequest(
                     reply_token=event.reply_token,
-                    messages=[image_message]
+                    messages=[TextMessage(text = '成功')]
                     )
                 )
 
-        else:
+        if event.message.text == "h":
             line_bot_api.reply_message_with_http_info(
                 ReplyMessageRequest(
                     reply_token=event.reply_token,
