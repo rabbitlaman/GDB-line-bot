@@ -79,8 +79,8 @@ def handle_postback(event):
     addful = profile.user_id
     
     picture1 = ImageMessage(
-         originalContentUrl='https://www.google.com/url?sa=i&url=https%3A%2F%2Fzh.pngtree.com%2Ffreebackground%2Fmonster-fear-horror-vector-photo_4859940.html&psig=AOvVaw0fjmSN8fqA61d5TkVIVGg1&ust=1704527832984000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJCn5pTjxYMDFQAAAAAdAAAAABAD',
-         previewImageUrl='https://www.google.com/url?sa=i&url=https%3A%2F%2Fzh.pngtree.com%2Ffreebackground%2Fmonster-fear-horror-vector-photo_4859940.html&psig=AOvVaw0fjmSN8fqA61d5TkVIVGg1&ust=1704527832984000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJCn5pTjxYMDFQAAAAAdAAAAABAD'
+         originalContentUrl='https://drive.google.com/file/d/19XR4tnlYv8naxVPBc29iYKQIWkQ27bug/view?usp=drive_link',
+         previewImageUrl='https://drive.google.com/file/d/19XR4tnlYv8naxVPBc29iYKQIWkQ27bug/view?usp=drive_link'
          
     )
     
