@@ -79,8 +79,8 @@ def handle_postback(event):
     addful = profile.user_id
     
     picture1 = ImageMessage(
-         originalContentUrl='https://drive.google.com/file/d/19XR4tnlYv8naxVPBc29iYKQIWkQ27bug/view?usp=drive_link',
-         previewImageUrl='https://drive.google.com/file/d/19XR4tnlYv8naxVPBc29iYKQIWkQ27bug/view?usp=drive_link'
+         originalContentUrl='https://upload.wikimedia.org/wikipedia/zh/c/cf/The_Guardians_of_the_Galaxy_Holiday_Special_logo.jpg',
+         previewImageUrl='https://upload.wikimedia.org/wikipedia/zh/c/cf/The_Guardians_of_the_Galaxy_Holiday_Special_logo.jpg'
          
     )
     
