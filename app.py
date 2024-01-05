@@ -78,7 +78,20 @@ def handle_postback(event):
     profile = line_bot_api.get_profile(event.source.user_id)
     addful = profile.user_id
     
+        pict = ImageMessage(
+         originalContentUrl='https://drive.google.com/file/d/19XR4tnlYv8naxVPBc29iYKQIWkQ27bug/view?usp=drive_link',
+         previewImageUrl='https://drive.google.com/file/d/19XR4tnlYv8naxVPBc29iYKQIWkQ27bug/view?usp=drive_link'
+         
+    )
     
+    
+    if postback == '每日經節':
+        line_bot_api.reply_message_with_http_info(
+            ReplyMessageRequest(
+                reply_token=event.reply_token,
+                messages=[pict]
+                )
+            )
     #與database做
     if postback == '功能使用':
         line_bot_api.reply_message_with_http_info(
