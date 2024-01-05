@@ -78,7 +78,7 @@ def handle_postback(event):
     profile = line_bot_api.get_profile(event.source.user_id)
     addful = profile.user_id
     
-        pict = ImageMessage(
+    picture1 = ImageMessage(
          originalContentUrl='https://drive.google.com/file/d/19XR4tnlYv8naxVPBc29iYKQIWkQ27bug/view?usp=drive_link',
          previewImageUrl='https://drive.google.com/file/d/19XR4tnlYv8naxVPBc29iYKQIWkQ27bug/view?usp=drive_link'
          
@@ -89,7 +89,7 @@ def handle_postback(event):
         line_bot_api.reply_message_with_http_info(
             ReplyMessageRequest(
                 reply_token=event.reply_token,
-                messages=[pict]
+                messages=[picture1]
                 )
             )
     #與database做
