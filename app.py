@@ -80,7 +80,7 @@ def handle_postback(event):
     
     picture1 = ImageMessage(
          originalContentUrl='https://drive.google.com/file/d/1DkJIG86mqfkGD7SWtRF1YptJSC7mCFxK/view?usp=drive_link',
-         previewImageUrl='https://drive.google.com/file/d/1DkJIG86mqfkGD7SWtRF1YptJSC7mCFxK/view?usp=drive_link'
+         previewImageUrl='https://truth.bahamut.com.tw/s01/202109/71c78e26c664975531fc7d555200e987.PNG'
          
     )
     
